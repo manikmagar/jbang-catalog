@@ -1,0 +1,14 @@
+{
+  "catalogs": {
+    "mms": {
+      "catalog-ref": "/Users/manik/devlife/codebase/jbang-catalog/jbang-catalog.json"
+    }
+  },
+  "aliases": {
+    "mulemeetupsync": {
+      "script-ref": "MuleMeetupCalendar.java",
+      "description": "Mule Meetup Calendar sync from bevy to google calendar. Requires credentials.json path as argument."
+    }
+  },
+  "templates": {}
+}

@@ -117,7 +117,7 @@ class BevyGoogleCalendarSync implements Callable<Integer> {
         Function<String, String> calendarEventIdFunction = eventId -> eventPrefix.concat("0meetup0event0").concat(eventId);
         for (MeetupEvent meetupEvent: upcomingEvents) {
             String eventId = calendarEventIdFunction.apply(meetupEvent.getId());
-            String rsvp = " <br/> <b>RSVP here</b> - ".concat(meetupEvent.getUrl()).concat("<br/> <b>NOTE:</b> This is just an informational calendar entry. Please visit actual RSVP page to register for the event.");
+            String rsvp = "<br/> <br/> <b>RSVP here</b> - ".concat(meetupEvent.getUrl()).concat("<br/><br/> <b>NOTE:</b> This is just an informational calendar entry. Please visit actual RSVP page to register for the event. See any issue with this calendar, you can reach out to <a href=\"https://twitter.com/ManikMagar\">Manik</a>");
             Event toInsert = new Event()
                     .setId(eventId)
                     .setSummary(meetupEvent.getTitle())

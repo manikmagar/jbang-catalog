@@ -1,2 +1,5 @@
 .local
 .tokens
+.DS_Store
+*.iml
+.idea

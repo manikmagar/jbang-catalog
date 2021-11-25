@@ -8,6 +8,10 @@
     "bevygooglesync": {
       "script-ref": "BevyGoogleCalendarSync.java",
       "description": "Bevy events sync to google calendar."
+    },
+    "socketioserver": {
+      "script-ref": "socketioserver.java",
+      "description": "Socket.io server."
     }
   },
   "templates": {}

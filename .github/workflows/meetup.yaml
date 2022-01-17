@@ -20,6 +20,7 @@ jobs:
           ENV_CRED : ${{ secrets.CALENDAR_CREDS }}
           ENV_MULE : ${{ secrets.BEVY_MULE_SYNC_PROPS }}
         run: |
+          mkdir .tokens
           echo -n $ENV_CRED | base64 -d > .tokens/StoredCredentials
           echo -n $ENV_MULE | base64 -d > mulesync.properties
       - name: jbang

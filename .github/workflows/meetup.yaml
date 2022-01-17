@@ -17,10 +17,12 @@ jobs:
             $-jbang-
       - name: Credfile
         env:
+          ENV_GOOGLE : ${{ secrets.ENV_GOOGLE_CALENDAR_FILE }}
           ENV_CRED : ${{ secrets.CALENDAR_CREDS }}
           ENV_MULE : ${{ secrets.BEVY_MULE_SYNC_PROPS }}
         run: |
           mkdir .tokens
+          echo -n $ENV_GOOGLE | base64 -d > .cred.google
           echo -n $ENV_CRED | base64 -d > .tokens/StoredCredentials
           echo -n $ENV_MULE | base64 -d > mulesync.properties
       - name: jbang
@@ -34,4 +36,5 @@ jobs:
       - name: CredfileClear
         run: |
           rm .tokens/StoredCredentials
+          rm .cred.google
           rm mulesync.properties

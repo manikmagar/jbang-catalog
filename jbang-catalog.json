@@ -1,18 +1,22 @@
 {
-  "catalogs": {},
-  "aliases": {
-    "mulemeetupsync": {
-      "script-ref": "MuleMeetupCalendar.java",
-      "description": "Mule Meetup Calendar sync from bevy to google calendar. Requires credentials.json path as argument."
+  "catalogs" : { },
+  "aliases" : {
+    "mulemeetupsync" : {
+      "script-ref" : "MuleMeetupCalendar.java",
+      "description" : "Mule Meetup Calendar sync from bevy to google calendar. Requires credentials.json path as argument."
     },
-    "bevygooglesync": {
-      "script-ref": "BevyGoogleCalendarSync.java",
-      "description": "Bevy events sync to google calendar."
+    "bevygooglesync" : {
+      "script-ref" : "BevyGoogleCalendarSync.java",
+      "description" : "Bevy events sync to google calendar."
     },
-    "socketioserver": {
-      "script-ref": "socketioserver.java",
-      "description": "Socket.io server."
+    "socketioserver" : {
+      "script-ref" : "socketioserver.java",
+      "description" : "Socket.io server."
+    },
+    "mulefd" : {
+      "script-ref" : "mulefd.java",
+      "description" : "Generate flow diagrams for Mule applications"
     }
   },
-  "templates": {}
+  "templates" : { }
 }
